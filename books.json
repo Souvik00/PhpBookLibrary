@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Lord of the Ring",
+        "author": "John Ronald Reuel Tolkien",
+        "price": "10",
+        "availability": "Available"
+    },
+    {
+        "title": "Harry Potter",
+        "author": "J. K. Rowling",
+        "price": "15",
+        "availability": "Not Available"
+    },
+    {
+        "title": "Geetaangali",
+        "author": "Rabindranath Tagore",
+        "price": "20",
+        "availability": "Available"
+    },
+    {
+        "title": "Pather Pachali",
+        "author": "Bibhutibhushan Bandyopadhyay",
+        "price": "15",
+        "availability": "Available"
+    },
+    {
+        "title": "Ghore Baire",
+        "author": "Rabindranath Tagore",
+        "price": "12",
+        "availability": "Availible"
+    },
+    {
+        "title": "Feluda",
+        "author": "Sharat Chandra",
+        "price": "20",
+        "availability": "Availible"
+    }
+]
