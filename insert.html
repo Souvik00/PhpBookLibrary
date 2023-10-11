@@ -9,7 +9,7 @@
     
     <h1 style="text-align: center; background-color:red;">Insert</h1>
     <div style="background-color: rgb(134, 11, 139); display: flex; flex-direction: column; align-items: center;">
-        <img src="books.jpg" alt="Book" style="width: 200px; height: 300px;">
+        <img src="books.jpg" alt="Book" style="width: 200px; height: 200px;">
     <form action="insert.php" method="post"  >
         <div class="form-group">
         <label for="title">Title:</label>
@@ -20,17 +20,22 @@
         <input type="text" class="form-control" id="author" placeholder="Enter Author " name="author" required>
     </div>
     <div class="form-group">
-        <label for="price">Price:</label>
-        <input type="text" class="form-control" id="price" placeholder="Enter Price " name="price" required>
-    </div>
-    <div class="form-group">
         <label for="availability">Availability:</label>
         <select id="availability" name="availability" class="form-control">
-            <option value="Availible">Availible</option>
-            <option value=" Not Availible">Not Availible</option>
+            <option value="True">Availible</option>
+            <option value="False">Not Availible</option>
         </select>
        
     </div>
+    <div class="form-group">
+        <label for="pages">Pages:</label>
+        <input type="number" class="form-control" id="pages" placeholder="Enter Pages " name="pages" required>
+    </div>
+    <div class="form-group">
+        <label for="isbn">ISBN:</label>
+        <input type="number" class="form-control" id="isbn" placeholder="Enter ISBN " name="isbn" required>
+    </div>
+    
         <input type="submit" value="Insert" class="btn btn-warning">
     </form>
     </div>

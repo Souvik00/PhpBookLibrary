@@ -27,10 +27,13 @@
             <th scope="col">ISBN</th>
      </tr>
  </thead>
-        <?php
-        $i=1;
-        $books = json_decode(file_get_contents('Souvik Sanyal - books.json'), true);
-        foreach ($books as $book) {
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $books = json_decode(file_get_contents('Souvik Sanyal - books.json'), true);
+    $title = $_POST['title'];
+ $i=1;
+    foreach ($books as $key => $book) {
+        if ($book['title'] === $title) {
             echo "<tr>";
             echo "<td>" . $i . "</td>";
             echo "<td>" . $book['title'] . "</td>";
@@ -42,7 +45,10 @@
             echo "</tr>";
             $i++;
         }
-        ?>
+    }
+    exit;
+}
+?>
     </table>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -50,3 +56,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
